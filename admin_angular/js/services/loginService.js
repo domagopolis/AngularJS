@@ -23,7 +23,7 @@ app.factory('loginService', function($http){
 			});
 		},
 		checkSession:function(scope,location){
-  			var $promise=$http.get('http://www.api.domagi.com/user_session.php');
+  			var $promise=$http.get('http://www.api.domagi.com/user_session.php', { withCredentials: true, useXDomain: true });
 
   			$promise.then(function(msg){
   				if( msg.data.session ){
