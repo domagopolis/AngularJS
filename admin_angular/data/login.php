@@ -1,5 +1,6 @@
 <?php
 include('include/general.php');
+include('include/model/user.php');
 
 $user=json_decode(file_get_contents('php://input')); //get user from json headers
 
