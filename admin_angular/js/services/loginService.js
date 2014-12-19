@@ -1,10 +1,5 @@
 'use strict'
-
-app
-.config(function ( $httpProvider) {
-	delete $httpProvider.defaults.headers.common['X-Requested-With'];
-})
-.factory('loginService', function($http){
+app.factory('loginService', function($http){
 	return{
 		login:function(user,scope,location){
 			var $promise=$http.post('http://www.api.domagi.com/login.php', user);

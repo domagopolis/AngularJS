@@ -9,8 +9,10 @@ $user_account->where( array( 'email' => $user->mail, 'password' => $user->pass )
 
 if( $user_account->user_id ){
 	$_SESSION['login'] = true;
-	print json_encode( array( 'success' => true ) );
+	$_SESSION['user_id'] = $user_account->user_id;
+	print json_encode( array( 'success' => true, 'user_id' => $user_account->user_id ) );
 }else{
+	$_SESSION['login'] = false;
 	print json_encode( array( 'success' => false ) );
 }
 ?>
