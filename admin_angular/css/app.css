@@ -29,4 +29,8 @@
   padding: 0;
 }
 
-form{ width: 300px; margin: auto; }
+main{ position: relative; display: block; background: #aaa; padding: 30px; width: 300px; margin: auto; border-radius: 10px; box-shadow: 5px 5px 5px #000; }
+form{ width: 100%; }
+label{ display: block; height: 20px; }
+input{ width: 90%; height: 20px; padding: 10px 5%; margin-bottom: 30px; box-shadow: 5px 5px 5px #000; }
+button{ padding: 10px; background: green; color: white; border: 1px solid black; border-radius: 10px; }

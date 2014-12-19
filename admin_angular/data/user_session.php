@@ -1,5 +1,6 @@
 <?php
 include('include/general.php');
+include('include/model/user.php');
 
 if( !isset($_SESSION['login']) ) $_SESSION['login'] = false;
 
